@@ -9,4 +9,12 @@
   <groupId>com.tb.common</groupId>
   <artifactId>tb-common</artifactId>
   <version>1.0.0-SNAPSHOT</version>
+  
+  <dependencies>
+  <!-- Jackson Json处理工具包 -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+	</dependency>
+  </dependencies>
 </project>
