@@ -1,4 +1,5 @@
 com\tb\common\org\gtmd\frame\tools\paramData.class
+com\tb\common\bean\api\RespInfo.class
 com\tb\common\bean\api\ItemCatData.class
 com\tb\common\bean\EasyUIResult.class
 com\tb\common\sys\springmvc\extend\conterver\json\CallbackMappingJackson2HttpMessageConverter.class
