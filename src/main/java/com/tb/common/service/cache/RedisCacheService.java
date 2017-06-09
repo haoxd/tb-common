@@ -65,16 +65,24 @@ public class RedisCacheService {
 		});
     }
     
+    
     /** 
      * 删除指定的key,
      */  
-    public  Long del(final String key){  
+    public  Long del(final String[] keys){  
     	return this.redisExecute(new RedisFunction<Long, ShardedJedis>() {
 
 			@Override
 			public Long redisCallBack(ShardedJedis e) {
-				
-				return e.del(key);
+				if(keys.length==1){
+				return	e.del(keys[1]);
+				}
+				long content = 0;
+				for (int i = 0; i < keys.length; i++) {
+					e.del(keys[i]);
+					content++;
+				}
+				return content;
 			}
     		   		
 		});
