@@ -67,7 +67,7 @@ public class RedisCacheService {
     
     
     /** 
-     * 删除指定的key,
+     * 删除指定的key,支持多个
      */  
     public  Long del(final String[] keys){  
     	return this.redisExecute(new RedisFunction<Long, ShardedJedis>() {
@@ -87,6 +87,21 @@ public class RedisCacheService {
     		   		
 		});
     }
+    /** 
+     * 删除指定的key
+     */  
+    public  Long del(final String keys){  
+    	return this.redisExecute(new RedisFunction<Long, ShardedJedis>() {
+
+			@Override
+			public Long redisCallBack(ShardedJedis e) {
+
+				return	e.del(keys);
+			}
+    		   		
+		});
+    }
+    
     
     /** 
      * 指定的key的生存时间(单位秒)
