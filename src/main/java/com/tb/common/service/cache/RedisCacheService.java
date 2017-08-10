@@ -139,6 +139,8 @@ public class RedisCacheService {
 		});
     }  
     
+   
+    
     /**
      * redis 方法实现
      */

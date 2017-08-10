@@ -1,4 +1,6 @@
 com\tb\common\org\gtmd\frame\tools\paramData.class
+com\tb\common\service\cache\RedisClusterService.class
+com\tb\common\service\cache\RedisClusterService$1.class
 com\tb\common\bean\EasyUIResult.class
 com\tb\common\sys\springmvc\extend\conterver\json\CallbackMappingJackson2HttpMessageConverter.class
 com\tb\common\bean\api\ItemCatResult.class
